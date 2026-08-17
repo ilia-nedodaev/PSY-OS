@@ -66,8 +66,11 @@ async def health():
 
 
 if settings.serve_frontend:
-    frontend_path = (Path(__file__).resolve().parents[2] / "frontend").resolve()
-    if not frontend_path.exists():
-        frontend_path = (Path(__file__).resolve().parents[2]).resolve()
+    frontend_path = Path("/frontend")
+
     if frontend_path.exists():
-        app.mount("/", StaticFiles(directory=str(frontend_path), html=True), name="frontend")
+        app.mount(
+            "/",
+            StaticFiles(directory=str(frontend_path), html=True),
+            name="frontend",
+        )
