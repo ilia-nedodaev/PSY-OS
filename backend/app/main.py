@@ -66,7 +66,7 @@ async def health():
 
 
 if settings.serve_frontend:
-    frontend_path = Path("/frontend")
+    frontend_path = Path("/app/frontend")
 
     if frontend_path.exists():
         app.mount(
