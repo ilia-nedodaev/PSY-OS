@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кабінет клієнта — PSY OS</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-page">
+  <header class="header header-minimal">
+    <nav class="nav container">
+      <a href="index.html" class="logo"><span class="logo-icon">Ψ</span><span class="logo-text">PSY OS</span></a>
+      <div class="user-bar">
+        <span id="userName"></span>
+        <button id="logoutBtn" class="btn btn-ghost btn-sm">Вийти</button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="dashboard-layout">
+    <aside class="dashboard-sidebar">
+      <nav>
+        <button class="sidebar-link active" data-panel="panel-sessions">Записи</button>
+        <button class="sidebar-link" data-panel="panel-homework">Домашки</button>
+        <button class="sidebar-link" data-panel="panel-chat">Чат</button>
+        <button class="sidebar-link" data-panel="panel-sos">SOS</button>
+      </nav>
+    </aside>
+
+    <main class="dashboard-main">
+      <section id="panel-sessions" class="dashboard-panel active">
+        <div class="dashboard-header"><h1>Мої записи</h1></div>
+        <div id="sessionsList" class="card-grid"></div>
+      </section>
+
+      <section id="panel-homework" class="dashboard-panel">
+        <div class="dashboard-header"><h1>Домашні завдання</h1></div>
+        <div id="homeworkList" class="card-grid"></div>
+      </section>
+
+      <section id="panel-chat" class="dashboard-panel">
+        <div class="dashboard-header"><h1>Чат з психологом</h1></div>
+        <div class="chat-box">
+          <div id="chatMessages" class="chat-messages"></div>
+          <div class="chat-input">
+            <input id="chatInput" placeholder="Повідомлення...">
+            <button id="sendChatBtn" class="btn btn-primary btn-sm" type="button">Надіслати</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="panel-sos" class="dashboard-panel">
+        <div class="dashboard-header"><h1>Екстрена допомога</h1></div>
+        <p style="color:var(--color-text-muted);margin-bottom:16px;max-width:520px">
+          Якщо вам потрібна термінова підтримка — натисніть SOS. Ваш психолог отримає сповіщення.
+          У разі небезпеки життя звертайтесь до місцевих екстрених служб.
+        </p>
+        <button id="sosBtn" class="btn sos-btn" type="button">SOS</button>
+        <div style="margin-top:24px">
+          <button id="payBtn" class="btn btn-secondary" type="button">Оплатити сесію (демо)</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/client-dashboard.js"></script>
+</body>
+</html>

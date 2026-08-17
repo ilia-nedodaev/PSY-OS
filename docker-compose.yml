@@ -1,0 +1,24 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: psyos-postgres
+    environment:
+      POSTGRES_USER: psyos
+      POSTGRES_PASSWORD: psyos_dev
+      POSTGRES_DB: psyos
+    ports:
+      - "5432:5432"
+    volumes:
+      - psyos_pg_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    container_name: psyos-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - psyos_redis_data:/data
+
+volumes:
+  psyos_pg_data:
+  psyos_redis_data:

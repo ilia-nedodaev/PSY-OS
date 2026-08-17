@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Реєстрація психолога в PSY OS — створіть акаунт для керування практикою">
+  <title>Реєстрація психолога — PSY OS</title>
+  <link rel="stylesheet" href="css/styles.css?v=3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="register-page">
+  <header class="header header-minimal">
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">Ψ</span>
+        <span class="logo-text">PSY OS</span>
+      </a>
+      <a href="index.html" class="btn btn-ghost btn-sm">На головну</a>
+    </nav>
+  </header>
+
+  <main class="register-main">
+    <div class="register-container">
+      <div class="register-info">
+        <h1>Реєстрація психолога</h1>
+        <p class="register-subtitle">
+          Створіть акаунт для керування своєю практикою. Клієнтів ви додаватимете 
+          самостійно через особистий кабінет — вони не реєструються самі.
+        </p>
+        <ul class="register-benefits">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            Безкоштовно на етапі запуску
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            Захищені дані та конфіденційність
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            Додавання клієнтів у два кліки
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            Працює на комп'ютері та телефоні
+          </li>
+        </ul>
+      </div>
+
+      <div class="register-form-wrapper">
+        <form class="register-form" id="registerForm" novalidate>
+          <input type="hidden" name="role" value="psychologist">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">Ім'я</label>
+              <input type="text" id="firstName" name="firstName" placeholder="Олена" required autocomplete="given-name">
+              <span class="form-error" data-for="firstName"></span>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Прізвище</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Коваленко" required autocomplete="family-name">
+              <span class="form-error" data-for="lastName"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Електронна пошта</label>
+            <input type="email" id="email" name="email" placeholder="olena@example.com" required autocomplete="email">
+            <span class="form-error" data-for="email"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" name="phone" placeholder="+380 XX XXX XX XX" autocomplete="tel">
+            <span class="form-error" data-for="phone"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Пароль</label>
+            <div class="password-input">
+              <input type="password" id="password" name="password" placeholder="Мінімум 8 символів" required autocomplete="new-password">
+              <button type="button" class="password-toggle" aria-label="Показати пароль">
+                <svg class="icon-hide" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+                  <line x1="1" y1="1" x2="23" y2="23"/>
+                </svg>
+                <svg class="icon-show" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </button>
+            </div>
+            <span class="form-error" data-for="password"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="confirmPassword">Підтвердження пароля</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Повторіть пароль" required autocomplete="new-password">
+            <span class="form-error" data-for="confirmPassword"></span>
+          </div>
+
+          <label class="checkbox-label">
+            <input type="checkbox" name="terms" required>
+            <span class="checkbox-custom"></span>
+            <span>Я погоджуюсь з <a href="#">умовами використання</a> та <a href="#">політикою конфіденційності</a></span>
+          </label>
+          <span class="form-error" data-for="terms"></span>
+
+          <button type="submit" class="btn btn-primary btn-full">Створити акаунт психолога</button>
+
+          <p class="form-note">
+            Ви клієнт? <a href="login.html">Увійдіть тут</a> — акаунт створює ваш психолог.
+          </p>
+
+          <p class="form-footer">
+            Вже маєте акаунт? <a href="login-psychologist.html">Увійти</a>
+          </p>
+        </form>
+
+        <div class="register-success" id="registerSuccess" hidden>
+          <div class="success-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+          </div>
+          <h2>Акаунт створено!</h2>
+          <p>Ласкаво просимо до PSY OS. Налаштуйте профіль і додайте своїх клієнтів у особистому кабінеті.</p>
+          <a href="index.html" class="btn btn-primary">На головну</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth-pages.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

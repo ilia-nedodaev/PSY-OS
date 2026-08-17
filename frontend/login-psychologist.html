@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Вхід для психолога в PSY OS — увійдіть у свій кабінет">
+  <title>Вхід для психолога — PSY OS</title>
+  <link rel="stylesheet" href="css/styles.css?v=3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="register-page login-page">
+  <header class="header header-minimal">
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">Ψ</span>
+        <span class="logo-text">PSY OS</span>
+      </a>
+      <a href="index.html" class="btn btn-ghost btn-sm">На головну</a>
+    </nav>
+  </header>
+
+  <main class="register-main">
+    <div class="register-container login-container">
+      <div class="register-info">
+        <span class="login-badge">Кабінет психолога</span>
+        <h1>Вхід для психолога</h1>
+        <p class="register-subtitle">
+          Увійдіть у свій профіль, щоб керувати клієнтами, сесіями та записами. 
+          Якщо ще немає акаунта — зареєструйтесь безкоштовно.
+        </p>
+      </div>
+
+      <div class="register-form-wrapper">
+        <form class="register-form login-form" id="psychologistLoginForm" data-login-type="psychologist" novalidate>
+          <input type="hidden" name="role" value="psychologist">
+
+          <div class="form-group">
+            <label for="email">Електронна пошта</label>
+            <input type="email" id="email" name="email" placeholder="olena@example.com" required autocomplete="email">
+            <span class="form-error" data-for="email"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Пароль</label>
+            <div class="password-input">
+              <input type="password" id="password" name="password" placeholder="Ваш пароль" required autocomplete="current-password">
+              <button type="button" class="password-toggle" aria-label="Показати пароль">
+                <svg class="icon-hide" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+                  <line x1="1" y1="1" x2="23" y2="23"/>
+                </svg>
+                <svg class="icon-show" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </button>
+            </div>
+            <span class="form-error" data-for="password"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">Увійти</button>
+
+          <p class="form-footer">
+            Немає акаунта? <a href="register.html">Зареєструватися</a>
+          </p>
+
+          <p class="form-note">
+            Ви клієнт? <a href="login.html">Увійти як клієнт</a>
+          </p>
+        </form>
+
+        <div class="register-success" id="loginSuccess" hidden>
+          <div class="success-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+          </div>
+          <h2>Вхід успішний!</h2>
+          <p>Ласкаво просимо. Незабаром відкриється ваш кабінет психолога.</p>
+          <a href="index.html" class="btn btn-primary">На головну</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth-pages.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

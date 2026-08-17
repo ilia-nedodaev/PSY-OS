@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PSY OS — професійна платформа для психологів та їхніх клієнтів. Керування сесіями, записами та прогресом терапії.">
+  <title>PSY OS — Платформа для психологів</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">Ψ</span>
+        <span class="logo-text">PSY OS</span>
+      </a>
+      <button class="nav-toggle" aria-label="Відкрити меню" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#features">Можливості</a></li>
+        <li><a href="#factors">Переваги</a></li>
+        <li><a href="#how-it-works">Як це працює</a></li>
+        <li class="nav-auth">
+          <a href="login-psychologist.html" class="btn btn-primary btn-sm">Для психолога</a>
+          <a href="login.html" class="btn btn-secondary btn-sm">Для клієнта</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <span class="hero-badge">Професійна екосистема для психологів</span>
+          <h1>Один простір для роботи з клієнтами та розвитку практики</h1>
+          <p class="hero-description">
+            PSY OS об'єднує керування клієнтами, планування сесій, ведення записів і безпечну комунікацію — 
+            у зручному, мінімалістичному інтерфейсі, створеному спеціально для психологічної практики.
+          </p>
+          <div class="hero-actions">
+            <a href="login-psychologist.html" class="btn btn-primary">Для психолога</a>
+            <a href="login.html" class="btn btn-secondary">Для клієнта</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-value">100%</span>
+              <span class="stat-label">Конфіденційність</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">24/7</span>
+              <span class="stat-label">Доступ до даних</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">∞</span>
+              <span class="stat-label">Клієнтів</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="dashboard-preview">
+            <div class="preview-header">
+              <div class="preview-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="preview-title">Панель психолога</span>
+            </div>
+            <div class="preview-body">
+              <div class="preview-sidebar">
+                <div class="preview-nav-item active"></div>
+                <div class="preview-nav-item"></div>
+                <div class="preview-nav-item"></div>
+                <div class="preview-nav-item"></div>
+              </div>
+              <div class="preview-main">
+                <div class="preview-card"></div>
+                <div class="preview-card small"></div>
+                <div class="preview-card small"></div>
+                <div class="preview-chart"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section features">
+      <div class="container">
+        <div class="section-header">
+          <h2>Можливості платформи</h2>
+          <p>Усе необхідне для ефективної роботи психолога в одному місці</p>
+        </div>
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3>Керування клієнтами</h3>
+            <p>Створюйте профілі клієнтів самостійно, ведіть історію сесій та індивідуальні нотатки в одному місці.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+            </div>
+            <h3>Планування сесій</h3>
+            <p>Зручний календар із нагадуваннями, онлайн- та офлайн-записами на прийом.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+              </svg>
+            </div>
+            <h3>Клінічні записи</h3>
+            <p>Структуровані нотатки після сесій із шаблонами для різних підходів терапії.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+            </div>
+            <h3>Безпечна комунікація</h3>
+            <p>Захищений канал зв'язку між психологом і клієнтом без сторонніх месенджерів.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="20" x2="18" y2="10"/>
+                <line x1="12" y1="20" x2="12" y2="4"/>
+                <line x1="6" y1="20" x2="6" y2="14"/>
+              </svg>
+            </div>
+            <h3>Відстеження прогресу</h3>
+            <p>Графіки динаміки стану клієнта, опитування та метрики ефективності терапії.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </div>
+            <h3>Захист даних</h3>
+            <p>Шифрування, контроль доступу та відповідність вимогам конфіденційності.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="factors" class="section factors">
+      <div class="container">
+        <div class="section-header">
+          <h2>Ключові фактори успішної платформи</h2>
+          <p>На що ми орієнтуємося при розробці PSY OS</p>
+        </div>
+        <div class="factors-list">
+          <article class="factor-item">
+            <span class="factor-number">01</span>
+            <div class="factor-content">
+              <h3>Конфіденційність і етика</h3>
+              <p>
+                Психологічна практика базується на довірі. Платформа забезпечує повну конфіденційність 
+                даних клієнтів, дотримання професійної етики та прозорі правила обробки інформації 
+                відповідно до законодавства України.
+              </p>
+            </div>
+          </article>
+          <article class="factor-item">
+            <span class="factor-number">02</span>
+            <div class="factor-content">
+              <h3>Зручність для спеціаліста</h3>
+              <p>
+                Інтерфейс розроблений разом із практикуючими психологами: мінімум зайвих кліків, 
+                швидкий доступ до потрібної інформації, зрозуміла навігація та адаптація під різні 
+                підходи — від КПТ до гештальт-терапії.
+              </p>
+            </div>
+          </article>
+          <article class="factor-item">
+            <span class="factor-number">03</span>
+            <div class="factor-content">
+              <h3>Досвід клієнта</h3>
+              <p>
+                Психолог сам додає клієнта до системи — той отримує доступ без самостійної реєстрації. 
+                Клієнтський кабінет простий: запис на сесію, домашні завдання та безпечний чат 
+                без зайвого стресу.
+              </p>
+            </div>
+          </article>
+          <article class="factor-item">
+            <span class="factor-number">04</span>
+            <div class="factor-content">
+              <h3>Безперервність терапії</h3>
+              <p>
+                Система нагадувань, історія сесій і централізовані записи допомагають не втрачати 
+                контекст між зустрічами. Це особливо важливо при тривалій роботі та онлайн-форматі 
+                консультування.
+              </p>
+            </div>
+          </article>
+          <article class="factor-item">
+            <span class="factor-number">05</span>
+            <div class="factor-content">
+              <h3>Масштабованість практики</h3>
+              <p>
+                Від індивідуального приватного кабінету до команди спеціалістів у клініці — 
+                платформа росте разом із вашою практикою без необхідності змінювати інструменти.
+              </p>
+            </div>
+          </article>
+          <article class="factor-item">
+            <span class="factor-number">06</span>
+            <div class="factor-content">
+              <h3>Доступність на будь-якому пристрої</h3>
+              <p>
+                Адаптивний дизайн дозволяє працювати з ноутбука в кабінеті, планшета під час 
+                сесії або телефона в дорозі — функціональність залишається повною.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="section how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <h2>Як це працює</h2>
+          <p>Три простих кроки до організованої практики</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-icon">1</div>
+            <h3>Зареєструйтесь</h3>
+            <p>Створіть акаунт психолога за кілька хвилин — це доступно лише для спеціалістів</p>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step">
+            <div class="step-icon">2</div>
+            <h3>Додайте клієнтів</h3>
+            <p>Налаштуйте профіль, розклад і створіть акаунти для своїх клієнтів</p>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step">
+            <div class="step-icon">3</div>
+            <h3>Працюйте ефективно</h3>
+            <p>Ведіть сесії, записи та відстежуйте прогрес у єдиній системі</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Готові організувати свою практику?</h2>
+          <p>Увійдіть або зареєструйтесь як психолог.</p>
+          <a href="login-psychologist.html" class="btn btn-primary btn-lg">Для психолога</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">Ψ</span>
+          <span class="logo-text">PSY OS</span>
+        </a>
+        <p>Професійна платформа для психологів та їхніх клієнтів</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Платформа</h4>
+          <ul>
+            <li><a href="#features">Можливості</a></li>
+            <li><a href="#factors">Переваги</a></li>
+            <li><a href="#how-it-works">Як це працює</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Акаунт</h4>
+          <ul>
+            <li><a href="login-psychologist.html">Вхід психолога</a></li>
+            <li><a href="register.html">Реєстрація психолога</a></li>
+            <li><a href="login.html">Вхід для клієнта</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>&copy; 2026 PSY OS. Усі права захищені.</p>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кабінет психолога — PSY OS</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-page">
+  <header class="header header-minimal">
+    <nav class="nav container">
+      <a href="index.html" class="logo"><span class="logo-icon">Ψ</span><span class="logo-text">PSY OS</span></a>
+      <div class="user-bar">
+        <span id="userName"></span>
+        <span id="aiStatus" class="badge badge-muted"></span>
+        <button id="logoutBtn" class="btn btn-ghost btn-sm">Вийти</button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="dashboard-layout">
+    <aside class="dashboard-sidebar">
+      <nav>
+        <button class="sidebar-link active" data-panel="panel-clients">Клієнти</button>
+        <button class="sidebar-link" data-panel="panel-client">Робота з клієнтом</button>
+        <button class="sidebar-link" data-panel="panel-sos">SOS</button>
+      </nav>
+    </aside>
+
+    <main class="dashboard-main">
+      <section id="panel-clients" class="dashboard-panel active">
+        <div class="dashboard-header"><h1>Клієнти</h1></div>
+        <form id="addClientForm" class="form-panel">
+          <h3>Додати клієнта</h3>
+          <div class="form-row">
+            <div class="form-group"><label>Ім'я</label><input name="first_name" required></div>
+            <div class="form-group"><label>Прізвище</label><input name="last_name" required></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Логін</label><input name="username" required></div>
+            <div class="form-group"><label>Пароль</label><input name="password" type="password" required></div>
+          </div>
+          <div class="form-group"><label>Телефон</label><input name="phone"></div>
+          <button class="btn btn-primary" type="submit">Створити клієнта</button>
+        </form>
+        <div id="clientsList" class="card-grid"></div>
+      </section>
+
+      <section id="panel-client" class="dashboard-panel">
+        <div class="dashboard-header">
+          <h1>Робота з клієнтом</h1>
+          <select id="clientSelect" class="form-group" style="max-width:280px;padding:10px;background:var(--color-surface-elevated);border:1px solid var(--color-border);color:var(--color-text);border-radius:8px;"></select>
+        </div>
+
+        <form id="addSessionForm" class="form-panel">
+          <h3>Нова сесія</h3>
+          <div class="form-row">
+            <div class="form-group"><label>Дата і час</label><input type="datetime-local" name="scheduled_at" required></div>
+            <div class="form-group"><label>Хвилин</label><input type="number" name="duration_minutes" value="50" min="15" max="180"></div>
+          </div>
+          <button class="btn btn-primary btn-sm" type="submit">Запланувати</button>
+        </form>
+
+        <form id="addNoteForm" class="form-panel">
+          <h3>Нотатка після сесії</h3>
+          <textarea name="content_text" placeholder="Текст нотатки..." required></textarea>
+          <div class="ai-placeholder">AI summary буде тут після підключення OPENAI_API_KEY</div>
+          <button class="btn btn-primary btn-sm" type="submit" style="margin-top:12px">Зберегти</button>
+        </form>
+
+        <form id="addHomeworkForm" class="form-panel">
+          <h3>Домашнє завдання</h3>
+          <div class="form-group"><label>Назва</label><input name="title" required></div>
+          <div class="form-group"><label>Опис</label><textarea name="description" required></textarea></div>
+          <div class="form-group"><label>Дедлайн</label><input type="datetime-local" name="due_at"></div>
+          <button class="btn btn-primary btn-sm" type="submit">Призначити</button>
+        </form>
+
+        <form id="addTimelineForm" class="form-panel">
+          <h3>Timeline подія</h3>
+          <div class="form-row">
+            <div class="form-group"><label>Дата</label><input type="date" name="event_date" required></div>
+            <div class="form-group"><label>Emoji</label><input name="emoji" maxlength="4" placeholder="❤️"></div>
+          </div>
+          <div class="form-group"><label>Подія</label><input name="title" required></div>
+          <button class="btn btn-primary btn-sm" type="submit">Додати</button>
+        </form>
+
+        <h3 style="margin:20px 0 12px">Сесії</h3>
+        <div id="sessionsList" class="card-grid"></div>
+        <h3 style="margin:20px 0 12px">Нотатки</h3>
+        <div id="notesList" class="card-grid"></div>
+        <h3 style="margin:20px 0 12px">Домашки</h3>
+        <div id="homeworkList" class="card-grid"></div>
+        <h3 style="margin:20px 0 12px">Timeline</h3>
+        <div id="timelineList" class="card-grid"></div>
+        <h3 style="margin:20px 0 12px">Чат</h3>
+        <div class="chat-box">
+          <div id="chatMessages" class="chat-messages"></div>
+          <div class="chat-input">
+            <input id="chatInput" placeholder="Повідомлення...">
+            <button id="sendChatBtn" class="btn btn-primary btn-sm" type="button">Надіслати</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="panel-sos" class="dashboard-panel">
+        <div class="dashboard-header"><h1>SOS повідомлення</h1></div>
+        <div id="sosList" class="card-grid"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/psychologist-dashboard.js"></script>
+</body>
+</html>

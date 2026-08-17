@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: psyos
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: SECRET_KEY
+        generateValue: true
+      - key: AI_ENABLED
+        value: "false"
+      - key: SERVE_FRONTEND
+        value: "true"
+      - key: CORS_ORIGINS
+        value: "*"
+      - key: UPLOAD_DIR
+        value: /app/uploads

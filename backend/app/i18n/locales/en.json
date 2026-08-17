@@ -1,0 +1,17 @@
+{
+  "auth.invalid_credentials": "Invalid login or password",
+  "auth.email_taken": "This email is already registered",
+  "auth.username_taken": "This username is already in use",
+  "auth.unauthorized": "Authentication required",
+  "auth.forbidden": "Access denied",
+  "client.created": "Client created",
+  "session.created": "Session scheduled",
+  "note.created": "Note saved",
+  "homework.created": "Homework assignment created",
+  "sos.sent": "SOS sent to your psychologist",
+  "payment.stub_title": "Payments coming soon",
+  "payment.stub_message": "This is demo mode. Real payments will be connected later.",
+  "ai.disabled": "AI is temporarily disabled",
+  "ai.limit_reached": "Daily AI request limit reached",
+  "ai.processing": "AI is processing the note..."
+}
